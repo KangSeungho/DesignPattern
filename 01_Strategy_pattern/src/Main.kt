@@ -1,17 +1,19 @@
-import duck.Duck;
-import duck.MallardDuck;
-import duck.ModelDuck;
-import duck.behavior.fly.FlyRocketPowered;
+import kotlin.jvm.JvmStatic
+import duck.Duck
+import duck.MallardDuck
+import duck.ModelDuck
+import duck.behavior.FlyRocketPowered
 
-public class Main {
-    public static void main(String[] args) {
-        Duck mallard = new MallardDuck();
-        mallard.performQuack();
-        mallard.performFly();
+object Main {
+    @JvmStatic
+    fun main(args: Array<String>) {
+        val mallard: Duck = MallardDuck()
+        mallard.performQuack()
+        mallard.performFly()
 
-        Duck model = new ModelDuck();
-        model.performFly();
-        model.setFlyBehavior(new FlyRocketPowered());
-        model.performFly();
+        val model: Duck = ModelDuck()
+        model.performFly()
+        model.setFlyBehavior(FlyRocketPowered())
+        model.performFly()
     }
 }

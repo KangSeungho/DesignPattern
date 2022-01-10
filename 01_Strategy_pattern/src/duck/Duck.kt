@@ -1,31 +1,31 @@
-package duck;
+package duck
 
-import duck.behavior.FlyBehavior;
-import duck.behavior.QuackBehavior;
+import duck.behavior.QuackBehavior
+import duck.behavior.FlyBehavior
 
-public abstract class Duck {
-    QuackBehavior quackBehavior;
-    FlyBehavior flyBehavior;
+abstract class Duck {
+    private var quackBehavior: QuackBehavior? = null
 
-    public abstract void display();
+    private var flyBehavior: FlyBehavior? = null
 
-    public void setFlyBehavior(FlyBehavior flyBehavior) {
-        this.flyBehavior = flyBehavior;
+    abstract fun display()
+    fun setFlyBehavior(flyBehavior: FlyBehavior?) {
+        this.flyBehavior = flyBehavior
     }
 
-    public void setQuackBehavior(QuackBehavior quackBehavior) {
-        this.quackBehavior = quackBehavior;
+    fun setQuackBehavior(quackBehavior: QuackBehavior?) {
+        this.quackBehavior = quackBehavior
     }
 
-    public void performFly() {
-        flyBehavior.fly();
+    fun performFly() {
+        flyBehavior?.fly()
     }
 
-    public void performQuack() {
-        quackBehavior.quack();
+    fun performQuack() {
+        quackBehavior?.quack()
     }
 
-    public void swim() {
-        System.out.println("모든 오리는 물에 뜹니다. 가짜 오리도 뜨죠");
+    fun swim() {
+        println("모든 오리는 물에 뜹니다. 가짜 오리도 뜨죠")
     }
 }

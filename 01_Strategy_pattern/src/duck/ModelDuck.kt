@@ -1,16 +1,15 @@
-package duck;
+package duck
 
-import duck.behavior.fly.FlyNoWay;
-import duck.behavior.quack.Quack;
+import duck.behavior.FlyNoWay
+import duck.behavior.Quack
 
-public class ModelDuck extends Duck {
-    public ModelDuck() {
-        flyBehavior = new FlyNoWay();
-        quackBehavior = new Quack();
+class ModelDuck : Duck() {
+    init {
+        setQuackBehavior(Quack())
+        setFlyBehavior(FlyNoWay())
     }
 
-    @Override
-    public void display() {
-        System.out.println("저는 모형 오리입니다.");
+    override fun display() {
+        println("저는 모형 오리입니다.")
     }
 }

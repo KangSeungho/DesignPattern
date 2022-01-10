@@ -1,5 +1,5 @@
 # DesignPattern
-Head First Design Patterns 책을 기반으로 정리하였습니다.
+Head First Design Patterns 책을 기반으로 정리하였습니다. (책은 JAVA로 되어있으나 Kotlin으로 다시 정리를 해보았습니다.)
 
 ### 1. 스트래티지 패턴 (Strategy pattern)
 - 알고리즘 군을 정의하고 각각을 캡슐화하여 교환해서 사용할 수 있도록 만든다.
